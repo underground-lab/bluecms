@@ -1,0 +1,9 @@
+venv/
+*~
+
+# Django #
+__pycache__/
+*.log
+*.pot
+*.pyc
+db.sqlite3
