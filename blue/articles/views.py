@@ -13,6 +13,7 @@ from .models import Article
 
 class ArticleListView(ListView):
     model = Article
+    paginate_by = 10
     template_name = 'homepage.html'
 
 
