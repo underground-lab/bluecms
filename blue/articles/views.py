@@ -9,6 +9,11 @@ class ArticleListView(ListView):
     model = Article
     paginate_by = 10
     template_name = 'homepage.html'
+    ordering = ['-created_date']
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(published=True)
 
 
 class ArticleDetailView(DetailView):
@@ -28,6 +33,7 @@ class RedactionArticleListView(UserPassesTestMixin, ListView):
     model = Article
     paginate_by = 10
     template_name = 'redaction_article.html'
+    ordering = ['-created_date']
 
     def test_func(self):
         if self.request.user.is_active:
