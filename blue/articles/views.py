@@ -20,6 +20,10 @@ def redaction(request):
     return render(request, 'redaction.html')
 
 
+def contact(request):
+    return render(request, 'contact.html')
+
+
 class RedactionArticleListView(UserPassesTestMixin, ListView):
     model = Article
     paginate_by = 10
@@ -27,7 +31,6 @@ class RedactionArticleListView(UserPassesTestMixin, ListView):
 
     def test_func(self):
         if self.request.user.is_active:
-            print(self.request.user)
             return True
         else:
             return False
@@ -41,7 +44,6 @@ class ArticleCreateView(UserPassesTestMixin, CreateView):
 
     def test_func(self):
         if self.request.user.is_active:
-            print(self.request.user)
             return True
         else:
             return False
@@ -55,7 +57,6 @@ class ArticleUpdateView(UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         if self.request.user.is_active:
-            print(self.request.user)
             return True
         else:
             return False
@@ -68,7 +69,6 @@ class ArticleDeleteView(UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         if self.request.user.is_active:
-            print(self.request.user)
             return True
         else:
             return False
