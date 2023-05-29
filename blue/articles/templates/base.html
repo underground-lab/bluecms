@@ -23,9 +23,15 @@
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li class="selected"><a href="/">Home</a></li>
+          {% if request.user.is_authenticated %}
           <li><a href="/redaction">Redaction</a></li>
+          {% endif %}
           <li><a href="/contact">Contact Us</a></li>
-          <li><a href="/login">Login</a></li>
+          {% if request.user.is_authenticated %}
+          <li><a href="/accounts/logout">Logout ({{ request.user.username }})</a></li>
+          {% else %}
+          <li><a href="/accounts/login">Login</a></li>
+          {% endif %}
         </ul>
       </div>
     </div>
@@ -51,7 +57,7 @@
         <form method="post" action="#" id="search_form">
           <p>
             <input class="search" type="text" name="search_field" value="Enter keywords....." />
-            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="static/style/search.png" alt="Search" title="Search" />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="/static/style/search.png" alt="Search" title="Search" />
           </p>
         </form>
       </div>

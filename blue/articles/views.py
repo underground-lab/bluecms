@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Article
 from .forms import ArticelForm
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 
 class ArticleListView(ListView):
@@ -19,27 +20,55 @@ def redaction(request):
     return render(request, 'redaction.html')
 
 
-class RedactionArticleListView(ListView):
+class RedactionArticleListView(UserPassesTestMixin, ListView):
     model = Article
     paginate_by = 10
     template_name = 'redaction_article.html'
 
+    def test_func(self):
+        if self.request.user.is_active:
+            print(self.request.user)
+            return True
+        else:
+            return False
 
-class ArticleCreateView(CreateView):
+
+class ArticleCreateView(UserPassesTestMixin, CreateView):
     model = Article
     form_class = ArticelForm
     template_name = 'article_edit.html'
     success_url = "/redaction_article"
 
+    def test_func(self):
+        if self.request.user.is_active:
+            print(self.request.user)
+            return True
+        else:
+            return False
 
-class ArticleUpdateView(UpdateView):
+
+class ArticleUpdateView(UserPassesTestMixin, UpdateView):
     model = Article
     form_class = ArticelForm
     template_name = 'article_edit.html'
     success_url = "/redaction_article"
 
+    def test_func(self):
+        if self.request.user.is_active:
+            print(self.request.user)
+            return True
+        else:
+            return False
 
-class ArticleDeleteView(DeleteView):
+
+class ArticleDeleteView(UserPassesTestMixin, DeleteView):
     model = Article
     template_name = 'article_confirm_delete.html'
     success_url = '/redaction_article'
+
+    def test_func(self):
+        if self.request.user.is_active:
+            print(self.request.user)
+            return True
+        else:
+            return False
