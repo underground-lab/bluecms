@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+<body>
+    {% block content %}
+    <h1>Redaction</h1>
+    <ul>
+        <li><a href="{% url 'redaction_article' %}">Articles</a></li>
+        <li>Shorts</li>
+        <li>Useful links</li>
+        <li>Settings</li>
+    </ul>
+    {% endblock %}
+</body>

@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
+{% load markdownify %}
 
 <body>
     {% block content %}
 
     {% if object_list %}
         {% for obj in object_list %}
-            <h1><a href="{% url 'app_article' obj.pk %}">{{ obj.header }}</a></h1>
-            <p>{{ obj.perex }}</p>
+            <h1><a href="{% url 'article' obj.pk %}">{{ obj.header }}</a></h1>
+            {{ obj.perex | markdownify }}
         {% endfor %}
     {% else %}
         <h3>No articles</h3>

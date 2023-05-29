@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% load markdownify %}
+
+<body>
+    {% block content %}
+    <h1>{{object.header}}</h1>
+    <p>{{object.created_date}} - {{object.author}}</p>
+    {{ object.perex | markdownify }}
+    {{ object.body | markdownify }}
+    {% endblock %}
+</body>
