@@ -6,11 +6,9 @@ class ArticelForm(ModelForm):
 
     class Meta:
         model = Article
-        fields = '__all__'
+        fields = ('header', 'published', 'perex', 'body')
         labels = {
             "header": "Header",
-            "author": "Author",
-            "created_date": "Created",
             "published": "Published",
             "perex": "Perex (markdown)",
             "body": "Body (markdown)",

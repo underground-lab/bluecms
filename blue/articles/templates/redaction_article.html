@@ -10,7 +10,9 @@
     <table>
         <tr>
             <th>Article</th>
+            <th>Author</th>
             <th>Created</th>
+            <th>Published</th>
             <th>&nbsp;</th>
             <th>&nbsp;</th>
         </tr>
@@ -18,7 +20,9 @@
         {% for obj in object_list %}
         <tr>
             <td><a href="{% url 'article' obj.pk %}">{{ obj.header }}</a></td>
-            <td>{{ obj.created_date }}</td>
+            <td>{{ obj.author }}</td>
+            <td>{{ obj.created_date|date:"jS M Y" }}</td>
+            <td>{{ obj.published }}</td>
             <td>[<a href="{% url 'article_update' obj.pk %}">Edit</a>]</td>
             <td>[<a href="{% url 'article_delete' obj.pk %}">Delete</a>]</td>
         </tr>

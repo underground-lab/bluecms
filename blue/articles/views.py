@@ -48,6 +48,10 @@ class ArticleCreateView(UserPassesTestMixin, CreateView):
     template_name = 'article_edit.html'
     success_url = "/redaction_article"
 
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super(ArticleCreateView, self).form_valid(form)
+
     def test_func(self):
         if self.request.user.is_active:
             return True
