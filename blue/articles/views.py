@@ -18,6 +18,12 @@ class ArticleListView(ListView):
         queryset = super().get_queryset()
         return queryset.filter(published=True)
 
+    def get_context_data(self, *args, **kwargs):
+        context = super(ListView, self).get_context_data(*args, **kwargs)
+        context['shorts'] = Short.objects.filter(published=True).order_by('-created_date')
+        context['useful_links'] = UsefulLink.objects.filter(published=True).order_by('order')
+        return context
+
 
 class ArticleDetailView(DetailView):
     model = Article
