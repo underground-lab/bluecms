@@ -3,6 +3,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import Article, Short, UsefulLink
 from .forms import ArticleForm, ShortForm, UsefulLinkForm
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.http import Http404
 
 
 # Articles
@@ -28,6 +29,12 @@ class ArticleListView(ListView):
 class ArticleDetailView(DetailView):
     model = Article
     template_name = 'article.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(DetailView, self).get_context_data(*args, **kwargs)
+        if not self.request.user.is_active and not context['object'].published:
+            raise Http404
+        return context
 
 
 # Redaction
