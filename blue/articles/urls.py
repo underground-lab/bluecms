@@ -10,5 +10,13 @@ urlpatterns = [
     path('article_create', views.ArticleCreateView.as_view(), name='article_create'),
     path('article_update/<int:pk>', views.ArticleUpdateView.as_view(), name='article_update'),
     path('article_delete/<int:pk>', views.ArticleDeleteView.as_view(), name='article_delete'),
+    path('redaction_short', views.RedactionShortListView.as_view(), name='redaction_short'),
+    path('short_create', views.ShortCreateView.as_view(), name='short_create'),
+    path('short_update/<int:pk>', views.ShortUpdateView.as_view(), name='short_update'),
+    path('short_delete/<int:pk>', views.ShortDeleteView.as_view(), name='short_delete'),
+    path('redaction_useful_link', views.RedactionUsefulLinkListView.as_view(), name='redaction_useful_link'),
+    path('useful_link_create', views.UsefulLinkCreateView.as_view(), name='useful_link_create'),
+    path('useful_link_update/<int:pk>', views.UsefulLinkUpdateView.as_view(), name='useful_link_update'),
+    path('useful_link_delete/<int:pk>', views.UsefulLinkDeleteView.as_view(), name='useful_link_delete'),
     path('contact', views.contact, name='contact'),
 ]
