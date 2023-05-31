@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% load markdownify %}
+
+{% block sitecontent %}
+<div class="sidebar">
+    <!-- insert your sidebar items here -->
+    <h3>Latest News</h3>
+    {% if shorts %}
+        {% for obj in shorts %}
+            <h4>{{ obj.header }}</h4>
+            <h5>{{ obj.created_date|date:"M jS Y" }}</h5>
+            {{ obj.body | markdownify }}
+            <p></p>
+        {% endfor %}
+    {% else %}
+        <h5>No shorts</h5>
+    {% endif %}
+    <h3>Useful Links</h3>
+    <ul>
+      {% if useful_links %}
+        {% for obj in useful_links %}
+        <li><a href="{{ obj.link }}">{{ obj.header }}</a></li>    
+        {% endfor %}
+      {% else %}
+        <li>No links</li>
+      {% endif %}
+    </ul>
+    <h3>Search</h3>
+    <form method="post" action="#" id="search_form">
+      <p>
+        <input class="search" type="text" name="search_field" value="Enter keywords....." />
+        <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="/static/style/search.png" alt="Search" title="Search" />
+      </p>
+    </form>
+  </div>
+  <div id="content">
+    <!-- insert the page content here -->
+    {% if messages %}
+        {% for msg in messages %}
+            <p>{{ msg }}</p>
+        {% endfor %}
+    {% endif %}
+    
+    {% block content %}
+    
+    {% endblock %}
+  </div>
+  {% endblock %}

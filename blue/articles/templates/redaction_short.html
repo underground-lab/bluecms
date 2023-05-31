@@ -6,10 +6,10 @@
 
     <h1>Redaction</h1>
 
-    [<a href="{% url 'article_create' %}">Create new article</a>]
+    [<a href="{% url 'short_create' %}">Create new short</a>]
     <table>
         <tr>
-            <th>Article</th>
+            <th>Header</th>
             <th>Author</th>
             <th>Created</th>
             <th>Published</th>
@@ -19,12 +19,12 @@
         {% if object_list %}
         {% for obj in object_list %}
         <tr>
-            <td><a href="{% url 'article' obj.pk %}">{{ obj.header }}</a></td>
+            <td>{{ obj.header }}</td>
             <td>{{ obj.author }}</td>
             <td>{{ obj.created_date|date:"jS M Y" }}</td>
             <td>{{ obj.published }}</td>
-            <td>[<a href="{% url 'article_update' obj.pk %}">Edit</a>]</td>
-            <td>[<a href="{% url 'article_delete' obj.pk %}">Delete</a>]</td>
+            <td>[<a href="{% url 'short_update' obj.pk %}">Edit</a>]</td>
+            <td>[<a href="{% url 'short_delete' obj.pk %}">Delete</a>]</td>
         </tr>
         {% endfor %}
         {% endif %}

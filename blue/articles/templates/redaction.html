@@ -2,12 +2,12 @@
 {% load static %}
 
 <body>
-    {% block content %}
+    {% block sitecontent %}
     <h1>Redaction</h1>
     <ul>
         <li><a href="{% url 'redaction_article' %}">Articles</a></li>
-        <li>Shorts</li>
-        <li>Useful links</li>
+        <li><a href="{% url 'redaction_short' %}">Shorts</a></li>
+        <li><a href="{% url 'redaction_useful_link' %}">Useful Links</a></li>
         <li>Settings</li>
     </ul>
     {% endblock %}
