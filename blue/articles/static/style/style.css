@@ -231,7 +231,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 .form_settings p
 { padding: 0 0 4px 0;}
 
-.form_settings span
+.form_settings span, label
 { float: left; 
   width: 200px; 
   text-align: left;}
@@ -243,6 +243,9 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   border: 1px solid #E5E5DB; 
   background: #FFF; 
   color: #47433F;}
+
+.form_settings input[type=checkbox]
+{ width: 20px; }
   
 .form_settings .submit
 { font: 100% arial; 
