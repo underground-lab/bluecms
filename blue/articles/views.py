@@ -27,6 +27,7 @@ class ArticleListView(ListView):
         context = super(ListView, self).get_context_data(*args, **kwargs)
         context['shorts'] = Short.objects.filter(published=True).order_by('-created_date')
         context['useful_links'] = UsefulLink.objects.filter(published=True).order_by('order')
+        context['menu'] = 1
         return context
 
 
@@ -36,6 +37,7 @@ class ArticleDetailView(DetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(DetailView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 1
         if not self.request.user.is_active and not context['object'].published:
             raise Http404
         return context
@@ -46,7 +48,10 @@ class ArticleDetailView(DetailView):
 
 
 def redaction(request):
-    return render(request, 'redaction.html')
+    context = {
+        'menu': 2,
+    }
+    return render(request, 'redaction.html', context=context)
 
 
 # Redaction - Article
@@ -57,6 +62,11 @@ class RedactionArticleListView(UserPassesTestMixin, ListView):
     paginate_by = 10
     template_name = 'redaction_article.html'
     ordering = ['-created_date']
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ListView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
 
     def test_func(self):
         if self.request.user.is_active:
@@ -70,6 +80,11 @@ class ArticleCreateView(UserPassesTestMixin, CreateView):
     form_class = ArticleForm
     template_name = 'article_edit.html'
     success_url = "/redaction_article"
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(CreateView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -88,6 +103,11 @@ class ArticleUpdateView(UserPassesTestMixin, UpdateView):
     template_name = 'article_edit.html'
     success_url = "/redaction_article"
 
+    def get_context_data(self, *args, **kwargs):
+        context = super(UpdateView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
+
     def test_func(self):
         if self.request.user.is_active:
             return True
@@ -99,6 +119,11 @@ class ArticleDeleteView(UserPassesTestMixin, DeleteView):
     model = Article
     template_name = 'article_confirm_delete.html'
     success_url = '/redaction_article'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(DeleteView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
 
     def test_func(self):
         if self.request.user.is_active:
@@ -117,6 +142,11 @@ class RedactionShortListView(UserPassesTestMixin, ListView):
     template_name = 'redaction_short.html'
     ordering = ['-created_date']
 
+    def get_context_data(self, *args, **kwargs):
+        context = super(ListView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
+
     def test_func(self):
         if self.request.user.is_active:
             return True
@@ -129,6 +159,11 @@ class ShortCreateView(UserPassesTestMixin, CreateView):
     form_class = ShortForm
     template_name = 'short_edit.html'
     success_url = "/redaction_short"
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(CreateView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -147,6 +182,11 @@ class ShortUpdateView(UserPassesTestMixin, UpdateView):
     template_name = 'short_edit.html'
     success_url = "/redaction_short"
 
+    def get_context_data(self, *args, **kwargs):
+        context = super(UpdateView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
+
     def test_func(self):
         if self.request.user.is_active:
             return True
@@ -157,6 +197,11 @@ class ShortDeleteView(UserPassesTestMixin, DeleteView):
     model = Short
     template_name = 'short_confirm_delete.html'
     success_url = '/redaction_short'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(DeleteView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
 
     def test_func(self):
         if self.request.user.is_active:
@@ -175,6 +220,11 @@ class RedactionUsefulLinkListView(UserPassesTestMixin, ListView):
     template_name = 'redaction_useful_link.html'
     ordering = ['order']
 
+    def get_context_data(self, *args, **kwargs):
+        context = super(ListView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
+
     def test_func(self):
         if self.request.user.is_active:
             return True
@@ -187,6 +237,11 @@ class UsefulLinkCreateView(UserPassesTestMixin, CreateView):
     form_class = UsefulLinkForm
     template_name = 'useful_link_edit.html'
     success_url = "/redaction_useful_link"
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(CreateView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
 
     def test_func(self):
         if self.request.user.is_active:
@@ -201,6 +256,11 @@ class UsefulLinkUpdateView(UserPassesTestMixin, UpdateView):
     template_name = 'useful_link_edit.html'
     success_url = "/redaction_useful_link"
 
+    def get_context_data(self, *args, **kwargs):
+        context = super(UpdateView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
+
     def test_func(self):
         if self.request.user.is_active:
             return True
@@ -212,6 +272,11 @@ class UsefulLinkDeleteView(UserPassesTestMixin, DeleteView):
     model = UsefulLink
     template_name = 'useful_link_confirm_delete.html'
     success_url = '/redaction_useful_link'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(DeleteView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 2
+        return context
 
     def test_func(self):
         if self.request.user.is_active:
@@ -225,6 +290,11 @@ class UsefulLinkDeleteView(UserPassesTestMixin, DeleteView):
 
 
 def contact(request):
+
+    context = {
+        'menu': 3,
+    }
+
     if request.method == 'POST':
         your_name = request.POST.get('your_name')
         your_email = request.POST.get('your_email')
@@ -244,6 +314,6 @@ def contact(request):
             )
             messages.success(request, "Your inquiry has been sent.")
 
-        return render(request, 'contact.html')
+        return render(request, 'contact.html', context=context)
     else:
-        return render(request, 'contact.html')
+        return render(request, 'contact.html', context=context)
