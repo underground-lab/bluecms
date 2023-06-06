@@ -36,6 +36,12 @@
       </div>
     </div>
     <div id="site_content">
+      {% if messages %}
+        {% for msg in messages %}
+            <p>{{ msg }}</p>
+        {% endfor %}
+      {% endif %}
+      
       {% block sitecontent %}
 
       {% endblock %}

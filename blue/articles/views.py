@@ -4,6 +4,9 @@ from .models import Article, Short, UsefulLink
 from .forms import ArticleForm, ShortForm, UsefulLinkForm
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.http import Http404
+from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 # Articles
@@ -221,4 +224,20 @@ class UsefulLinkDeleteView(UserPassesTestMixin, DeleteView):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method == 'POST':
+        your_name = request.POST.get('your_name')
+        your_email = request.POST.get('your_email')
+        your_enquiry = request.POST.get('your_enquiry')
+
+        recipientlist = [settings.EMAIL_RECIPIENT, ]
+        send_mail(
+            "BlueCms - Inquiry",
+            f"Name: {your_name}\n E-Mail: {your_email}\n Text:\n {your_enquiry}",
+            settings.EMAIL_HOST_USER,
+            recipientlist
+        )
+
+        messages.success(request, "Your inquiry has been sent.")
+        return render(request, 'contact.html')
+    else:
+        return render(request, 'contact.html')
