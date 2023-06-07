@@ -1,9 +1,13 @@
+# General
 venv/
 *~
 
-# Django #
+# Django
 __pycache__/
 *.log
 *.pot
 *.pyc
+
+# Project
 db.sqlite3
+media/

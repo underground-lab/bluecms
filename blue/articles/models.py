@@ -33,3 +33,13 @@ class UsefulLink(models.Model):
 
     def __str__(self):
         return f"UsefulLink: {self.header}"
+
+
+class Asset(models.Model):
+    description = models.CharField(max_length=100)
+    file = models.ImageField(upload_to='assets')
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    created_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Asset: {self.description}"
