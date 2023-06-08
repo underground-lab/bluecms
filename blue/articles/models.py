@@ -13,6 +13,10 @@ class Article(models.Model):
     def __str__(self):
         return f"Article: {self.header}"
 
+    @property
+    def assets(self):
+        return self.asset_set.all()
+
 
 class Short(models.Model):
     header = models.CharField(max_length=100)

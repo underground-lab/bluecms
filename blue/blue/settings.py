@@ -44,9 +44,12 @@ INSTALLED_APPS = [
 
 MARKDOWNIFY = {
    "default": {
-      "WHITELIST_TAGS": ['a', 'p',
-        'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7',
-        'ul', 'li', 'span', 'strong', 'em']
+        "WHITELIST_TAGS": [
+            'a', 'p',
+            'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7',
+            'ul', 'li', 'span', 'strong', 'em', 'img'],
+        "WHITELIST_ATTRS": [
+            'href', 'src', 'alt']
    },
 }
 
