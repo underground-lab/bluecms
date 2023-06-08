@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from . models import Article, Short, UsefulLink
+from . models import Article, Short, UsefulLink, Asset
 
 
 class ArticleForm(ModelForm):
@@ -37,4 +37,16 @@ class UsefulLinkForm(ModelForm):
             "link": "Link",
             "published": "Published",
             "order": "Order",
+        }
+
+
+class AssetForm(ModelForm):
+
+    class Meta:
+        model = Asset
+        fields = ('description', 'article', 'file')
+        labels = {
+            "description": "Description",
+            "article": "Article",
+            "file": "File",
         }
