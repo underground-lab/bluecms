@@ -22,7 +22,6 @@ urlpatterns = [
     path('useful_link_delete/<int:pk>', views.UsefulLinkDeleteView.as_view(), name='useful_link_delete'),
     path('redaction_asset', views.RedactionAssetListView.as_view(), name='redaction_asset'),
     path('asset_create', views.AssetCreateView.as_view(), name='asset_create'),
-    path('asset_update/<int:pk>', views.AssetUpdateView.as_view(), name='asset_update'),
     path('asset_delete/<int:pk>', views.AssetDeleteView.as_view(), name='asset_delete'),
     path('contact', views.contact, name='contact'),
 ]

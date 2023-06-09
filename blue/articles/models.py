@@ -1,3 +1,4 @@
+import os
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -47,3 +48,8 @@ class Asset(models.Model):
 
     def __str__(self):
         return f"Asset: {self.description}"
+
+    def delete(self, *args, **kwargs):
+        if os.path.isfile(self.file.path):
+            os.remove(self.file.path)
+        super(Asset, self).delete(*args, **kwargs)

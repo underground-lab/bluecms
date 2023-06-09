@@ -324,24 +324,6 @@ class AssetCreateView(UserPassesTestMixin, CreateView):
             return False
 
 
-class AssetUpdateView(UserPassesTestMixin, UpdateView):
-    model = Asset
-    form_class = AssetForm
-    template_name = 'asset_edit.html'
-    success_url = "/redaction_asset"
-
-    def get_context_data(self, *args, **kwargs):
-        context = super(UpdateView, self).get_context_data(*args, **kwargs)
-        context['menu'] = 2
-        return context
-
-    def test_func(self):
-        if self.request.user.is_active:
-            return True
-        else:
-            return False
-
-
 class AssetDeleteView(UserPassesTestMixin, DeleteView):
     model = Asset
     template_name = 'asset_confirm_delete.html'

@@ -4,7 +4,7 @@
 <body>
     {% block sitecontent %}
 
-    <h1>Redaction</h1>
+    <h1>Redaction - Assets</h1>
 
     [<a href="{% url 'asset_create' %}">Create new asset</a>]
     <table>
@@ -14,7 +14,6 @@
             <th>Created</th>
             <th>File</th>
             <th>&nbsp;</th>
-            <th>&nbsp;</th>
         </tr>
         {% if object_list %}
         {% for obj in object_list %}
@@ -23,7 +22,6 @@
             <td>{{ obj.article.header }}</td>
             <td>{{ obj.created_date|date:"jS M Y" }}</td>
             <td>{{ obj.file }}</td>
-            <td>[<a href="{% url 'asset_update' obj.pk %}">Edit</a>]</td>
             <td>[<a href="{% url 'asset_delete' obj.pk %}">Delete</a>]</td>
         </tr>
         {% endfor %}
