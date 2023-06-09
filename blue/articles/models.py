@@ -40,9 +40,13 @@ class UsefulLink(models.Model):
         return f"UsefulLink: {self.header}"
 
 
+def article_directory_path(instance, filename):
+    return 'assets/{0}/{1}'.format(instance.article.id, filename)
+
+
 class Asset(models.Model):
     description = models.CharField(max_length=100)
-    file = models.FileField(upload_to='assets')
+    file = models.FileField(upload_to=article_directory_path)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     created_date = models.DateTimeField(auto_now_add=True)
 
