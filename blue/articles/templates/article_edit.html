@@ -17,12 +17,14 @@
     <table>
         <tr>
             <th>Description</th>
-            <th>File</th>
+            <th>Insert asset as link</th>
+            <th>Insert asset as picture</th>
         </tr>
     {% for obj in object.assets %}
         <tr>
             <td>{{ obj.description }}</td>
-            <td>{{ obj.file }}</td>
+            <td>[{{ obj.description }}](/media/{{ obj.file }})</td>
+            <td>![{{ obj.description }}](/media/{{ obj.file }})</td>
         </tr>
     {% endfor %}
     </table>

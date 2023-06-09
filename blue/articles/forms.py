@@ -6,7 +6,7 @@ class ArticleForm(ModelForm):
 
     class Meta:
         model = Article
-        fields = ('header', 'published', 'perex', 'body')
+        fields = ('header', 'perex', 'body', 'published')
         labels = {
             "header": "Header",
             "published": "Published",
