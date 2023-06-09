@@ -10,5 +10,25 @@
             <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" value="submit" /></p>
         </div>
     </form>
+
+
+    {% if object.assets %}
+    <h4>Assets</h4>
+    <table>
+        <tr>
+            <th>Description</th>
+            <th>Insert asset as link</th>
+            <th>Insert asset as picture</th>
+        </tr>
+    {% for obj in object.assets %}
+        <tr>
+            <td>{{ obj.description }}</td>
+            <td>[{{ obj.description }}](/media/{{ obj.file }})</td>
+            <td>![{{ obj.description }}](/media/{{ obj.file }})</td>
+        </tr>
+    {% endfor %}
+    </table>
+    {% endif %}
+
     {% endblock %}
 </body>

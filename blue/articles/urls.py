@@ -1,5 +1,7 @@
 from . import views
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -18,5 +20,11 @@ urlpatterns = [
     path('useful_link_create', views.UsefulLinkCreateView.as_view(), name='useful_link_create'),
     path('useful_link_update/<int:pk>', views.UsefulLinkUpdateView.as_view(), name='useful_link_update'),
     path('useful_link_delete/<int:pk>', views.UsefulLinkDeleteView.as_view(), name='useful_link_delete'),
+    path('redaction_asset', views.RedactionAssetListView.as_view(), name='redaction_asset'),
+    path('asset_create', views.AssetCreateView.as_view(), name='asset_create'),
+    path('asset_delete/<int:pk>', views.AssetDeleteView.as_view(), name='asset_delete'),
     path('contact', views.contact, name='contact'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
