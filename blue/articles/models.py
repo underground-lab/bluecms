@@ -17,6 +17,10 @@ class Article(models.Model):
     @property
     def assets(self):
         return self.asset_set.all()
+    
+    class Meta:
+        ordering = ['-id']
+
 
 
 class Short(models.Model):
