@@ -42,7 +42,7 @@ class UsefulLink(models.Model):
 
 class Asset(models.Model):
     description = models.CharField(max_length=100)
-    file = models.ImageField(upload_to='assets')
+    file = models.FileField(upload_to='assets')
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     created_date = models.DateTimeField(auto_now_add=True)
 
