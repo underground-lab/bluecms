@@ -19,7 +19,7 @@ class ShortForm(ModelForm):
 
     class Meta:
         model = Short
-        fields = ('header', 'published', 'body')
+        fields = ('header', 'body', 'published')
         labels = {
             "header": "Header",
             "published": "Published",
@@ -31,7 +31,7 @@ class UsefulLinkForm(ModelForm):
 
     class Meta:
         model = UsefulLink
-        fields = ('header', 'link', 'published', 'order')
+        fields = ('header', 'link', 'order', 'published')
         labels = {
             "header": "Header",
             "link": "Link",
