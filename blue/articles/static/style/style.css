@@ -225,13 +225,13 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   padding: 4px; 
   font: 100% arial, sans-serif;}
 
-.form_settings
+.form_settings, .form_settings_redaction
 { margin: 15px 0 0 0;}
 
-.form_settings p
+.form_settings p, .form_settings_redaction p
 { padding: 0 0 4px 0;}
 
-.form_settings span, label
+.form_settings span, label, .form_settings_redaction span, label
 { float: left; 
   width: 200px; 
   text-align: left;}
@@ -244,7 +244,15 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   background: #FFF; 
   color: #47433F;}
 
-.form_settings input[type=checkbox]
+.form_settings_redaction input, .form_settings_redaction textarea
+{ padding: 5px; 
+  width: 550px; 
+  font: 100% arial; 
+  border: 1px solid #E5E5DB; 
+  background: #FFF; 
+  color: #47433F;}
+
+.form_settings input[type=checkbox], .form_settings_redaction input[type=checkbox]
 { width: 20px; }
   
 .form_settings .submit
@@ -258,14 +266,29 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   background: #263C56; 
   color: #FFF;}
 
+.form_settings_redaction .submit
+{ font: 100% arial; 
+  border: 1px solid; 
+  width: 99px; 
+  margin: 0 0 0 463px; 
+  height: 33px;
+  padding: 2px 0 3px 0;
+  cursor: pointer; 
+  background: #263C56; 
+  color: #FFF;}
+
 .form_settings textarea, .form_settings select
 { font: 100% arial; 
   width: 299px;}
 
-.form_settings select
+.form_settings_redaction textarea, .form_settings_redaction select
+{ font: 100% arial; 
+  width: 550px;}
+
+.form_settings select, .form_settings_redaction select
 { width: 310px;}
 
-.form_settings .checkbox
+.form_settings .checkbox, .form_settings_redaction .checkbox
 { margin: 4px 0; 
   padding: 0; 
   width: 14px;
