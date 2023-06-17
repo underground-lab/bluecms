@@ -7,6 +7,7 @@ from django.http import Http404
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
+from django.db.models import Q
 from .utils import validate_email_address
 
 
@@ -19,9 +20,18 @@ class ArticleListView(ListView):
     template_name = 'homepage.html'
     ordering = ['-created_date']
 
-    def get_queryset(self):
+    def post(self, request, *args, **kwargs):
+        search = request.POST.get('search_field')
+        self.object_list = self.get_queryset(search)
+        context = self.get_context_data()
+        return self.render_to_response(context)
+
+    def get_queryset(self, search=None):
         queryset = super().get_queryset()
-        return queryset.filter(published=True)
+        if search == None:
+            return queryset.filter(published=True)
+        else:
+            return queryset.filter(Q(published=True) & (Q(header__icontains=search) | Q(perex__icontains=search) | Q(body__icontains=search)))
 
     def get_context_data(self, *args, **kwargs):
         context = super(ListView, self).get_context_data(*args, **kwargs)
