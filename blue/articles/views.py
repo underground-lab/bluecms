@@ -31,6 +31,8 @@ class ArticleListView(ListView):
         self.object_list = self.get_queryset(search)
         context = self.get_context_data()
         if search is not None:
+            context['search'] = search
+        if search is not None:
             found = len(context['object_list'])
             messages.success(request, f"Searching for '{search}': {found} articles found")
         return self.render_to_response(context)
@@ -47,6 +49,7 @@ class ArticleListView(ListView):
         context['shorts'] = Short.objects.filter(published=True).order_by('-created_date')
         context['useful_links'] = UsefulLink.objects.filter(published=True).order_by('order')
         context['menu'] = 1
+        context['search'] = ''
         return context
 
 
@@ -57,6 +60,7 @@ class ArticleDetailView(DetailView):
     def get_context_data(self, *args, **kwargs):
         context = super(DetailView, self).get_context_data(*args, **kwargs)
         context['menu'] = 1
+        context['search'] = self.request.GET.get('search', '')
         if not self.request.user.is_active and not context['object'].published:
             raise Http404
         return context
