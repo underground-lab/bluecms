@@ -57,6 +57,7 @@ class ArticleDetailView(DetailView):
     def get_context_data(self, *args, **kwargs):
         context = super(DetailView, self).get_context_data(*args, **kwargs)
         context['menu'] = 1
+        context['head'] = context['object'].header
         if not self.request.user.is_active and not context['object'].published:
             raise Http404
         return context
