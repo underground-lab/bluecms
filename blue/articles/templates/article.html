@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
-{% load markdownify %}
+{% load markdown_extras %}
 {% load article_filters %}
 
-<body>
+<body>+
     {% block sitecontent %}
     <h1>{{ object.header | highlight:search }}</h1>
     <p>{{ object.created_date|date:"jS M Y" }} - {{ object.author }}</p>
-    {{ object.perex | markdownify | highlight:search }}
-    {{ object.body | markdownify | highlight:search }}
+    {{ object.perex | highlight:search | markdown | safe}}
+    {{ object.body | highlight:search | markdown | safe }}
     {% endblock %}
 </body>

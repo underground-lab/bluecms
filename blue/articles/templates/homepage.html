@@ -1,6 +1,6 @@
 {% extends "base_with_sidebar.html" %}
 {% load static %}
-{% load markdownify %}
+{% load markdown_extras %}
 {% load article_filters %}
 
 <body>
@@ -9,7 +9,7 @@
     {% if object_list %}
         {% for obj in object_list %}
             <h1><a {% if search != '' %} href="{% url 'article' obj.pk %}?search={{ search }}" {% else %} href="{% url 'article' obj.pk %}" {% endif %}>{{ obj.header  | highlight:search }}</a></h1>
-            {{ obj.perex | markdownify | highlight:search }}
+            {{ obj.perex | highlight:search | markdown | safe }}
         {% endfor %}
     {% else %}
         <h3>No articles</h3>

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% load markdownify %}
+{% load markdown_extras %}
 
 {% block sitecontent %}
 <div class="sidebar">
@@ -10,7 +10,7 @@
         {% for obj in shorts %}
             <h4>{{ obj.header }}</h4>
             <h5>{{ obj.created_date|date:"M jS Y" }}</h5>
-            {{ obj.body | markdownify }}
+            {{ obj.body | markdown | safe }}
             <p></p>
         {% endfor %}
     {% else %}
