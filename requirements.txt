@@ -1,2 +1,2 @@
-django == 4.2.1
-django-markdownify == 0.9.3
+django == 4.2.2
+markdown == 3.4.3
