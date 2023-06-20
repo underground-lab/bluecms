@@ -37,11 +37,11 @@
     </div>
     <div id="site_content">
       {% if messages %}
-        <ul>
+        <ul class="msg">
         {% for msg in messages %}
-            <li>{{ msg }}</li>
+            <li class="msg-{{ msg.tags }}">{{ msg }}</li>
         {% endfor %}
-      </ul>
+        </ul>
       {% endif %}
       
       {% block sitecontent %}

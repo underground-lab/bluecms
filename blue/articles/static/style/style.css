@@ -315,3 +315,35 @@ table tr td
 { background: #F0EFE2;
   color: #47433F;
   border-top: 1px solid #FFF;}
+
+.msg
+{ margin: 0 0 0 0;}
+
+.msg-error, .msg-success
+{ border-radius: .5rem;
+  display: flex;
+  padding: 0.4375rem 1rem 0.4375rem 1rem;
+  border-width: 1px;
+  border-style: solid;
+  position: relative;
+}
+
+.msg-error
+{ background-color: #ffeaf4;
+  border-color: #ff8ec4;
+}
+
+.msg-success
+{ background-color: #f5fae5;
+  border-color: #cee67e;
+}
+
+.msg-info
+{ background-color: #e1f4ff;
+  border-color: #7bcfff;
+}
+
+.msg-debug, .msg-warning
+{ background-color: #fff8d6;
+  border-color: #ffe770;
+}
