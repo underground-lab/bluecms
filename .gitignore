@@ -11,3 +11,4 @@ __pycache__/
 # Project
 db.sqlite3
 media/
+local_settings.py
