@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-25 23:21+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: articles/templates/base.html:20
+msgid "__website_name_1__"
+msgstr "blue"
+
+#: articles/templates/base.html:20
+msgid "__website_name_2__"
+msgstr "cms"
+
+#: articles/templates/base.html:21
+msgid "Simple. Contemporary. CMS Template."
+msgstr "Simple. Contemporary. CMS Template."
+
+#: articles/templates/base.html:27
+msgid "Home"
+msgstr "Home"
+
+#: articles/templates/base.html:29
+msgid "Redaction"
+msgstr "Redaction"
+
+#: articles/templates/base.html:31
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: articles/templates/base.html:33
+msgid "Logout"
+msgstr "Logout"
+
+#: articles/templates/base.html:35
+msgid "Login"
+msgstr "Login"
+
+#: articles/views.py:27
+msgid "Search: Keyword '{}' is too short. Type at least 3 characters."
+msgstr "Search: Keyword '{}' is too short. Type at least 3 characters."
+
+#: articles/views.py:30
+msgid "Search: Keyword is too long. Type maximum of 100 characters."
+msgstr "Search: Keyword is too long. Type maximum of 100 characters."
+
+#: articles/views.py:38
+msgid "Searching for '{}': {} articles found."
+msgstr "Searching for '{}': {} articles found."

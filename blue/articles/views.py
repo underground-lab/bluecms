@@ -9,6 +9,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.db.models import Q
 from .utils import validate_email_address
+from django.utils.translation import gettext as _
 
 
 # Articles
@@ -23,10 +24,10 @@ class ArticleListView(ListView):
     def post(self, request, *args, **kwargs):
         search = request.POST.get('search_field')
         if search is None or len(search) < 3:
-            messages.error(request, f"Search: Keyword '{search}' is too short. Type at least 3 characters.")
+            messages.error(request, _("Search: Keyword '{}' is too short. Type at least 3 characters.").format(search))
             search = None
         if search is not None and len(search) > 100:
-            messages.error(request, f"Search: Keyword is too long. Type maximum of 100 characters.")
+            messages.error(request, _("Search: Keyword is too long. Type maximum of 100 characters."))
             search = None
         self.object_list = self.get_queryset(search)
         context = self.get_context_data()
@@ -34,7 +35,7 @@ class ArticleListView(ListView):
             context['search'] = search
         if search is not None:
             found = len(context['object_list'])
-            messages.success(request, f"Searching for '{search}': {found} articles found")
+            messages.success(request, _("Searching for '{}': {} articles found.").format(search, found))
         return self.render_to_response(context)
 
     def get_queryset(self, search=None):

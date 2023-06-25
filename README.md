@@ -9,6 +9,7 @@ pip install -r requirements.txt
 cd blue
 python manage.py migrate
 python manage.py createsuperuser
+django-admin compilemessages
 ```
 
 ## Run
