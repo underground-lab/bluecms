@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load static %}
 {% load markdown_extras %}
 
 {% block sitecontent %}
 <div class="sidebar">
     <!-- insert your sidebar items here -->
-    <h3>Latest News</h3>
+    <h3>{% trans 'Latest News' %}</h3>
     {% if shorts %}
         {% for obj in shorts %}
             <h4>{{ obj.header }}</h4>
@@ -14,19 +15,19 @@
             <p></p>
         {% endfor %}
     {% else %}
-        <h5>No shorts</h5>
+        <h5>{% trans 'No shorts' %}</h5>
     {% endif %}
-    <h3>Useful Links</h3>
+    <h3>{% trans 'Useful Links' %}</h3>
     <ul>
       {% if useful_links %}
         {% for obj in useful_links %}
         <li><a href="{{ obj.link }}">{{ obj.header }}</a></li>    
         {% endfor %}
       {% else %}
-        <li>No links</li>
+        <li>{% trans 'No links' %}</li>
       {% endif %}
     </ul>
-    <h3>Search</h3>
+    <h3>{% trans 'Search' %}</h3>
     <form method="post" action="" id="search_form">
       {% csrf_token %}
       <p>

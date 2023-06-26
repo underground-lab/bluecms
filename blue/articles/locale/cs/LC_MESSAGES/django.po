@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-26 00:39+0200\n"
+"POT-Creation-Date: 2023-06-26 23:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,72 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
 "<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
+#: articles/templates/article_confirm_delete.html:10
+msgid "Are you sure you want to delete article"
+msgstr ""
+
+#: articles/templates/article_confirm_delete.html:13
+#: articles/templates/asset_confirm_delete.html:13
+#: articles/templates/redaction_article.html:28
+#: articles/templates/redaction_asset.html:26
+#: articles/templates/redaction_short.html:28
+#: articles/templates/redaction_useful_link.html:28
+#: articles/templates/short_confirm_delete.html:13
+#: articles/templates/useful_link_confirm_delete.html:13
+msgid "Delete"
+msgstr ""
+
+#: articles/templates/article_confirm_delete.html:14
+#: articles/templates/asset_confirm_delete.html:14
+#: articles/templates/short_confirm_delete.html:14
+#: articles/templates/useful_link_confirm_delete.html:14
+msgid "Cancel"
+msgstr ""
+
+#: articles/templates/article_edit.html:6
+#: articles/templates/redaction_article.html:13
+#: articles/templates/redaction_asset.html:14
+msgid "Article"
+msgstr ""
+
+#: articles/templates/article_edit.html:11
+#: articles/templates/asset_edit.html:11 articles/templates/contact.html:16
+#: articles/templates/short_edit.html:11
+#: articles/templates/useful_link_edit.html:11
+msgid "submit"
+msgstr ""
+
+#: articles/templates/article_edit.html:17 articles/templates/redaction.html:10
+msgid "Assets"
+msgstr ""
+
+#: articles/templates/article_edit.html:20
+#: articles/templates/redaction_asset.html:13
+#, fuzzy
+#| msgid "Redaction"
+msgid "Description"
+msgstr "Redakce"
+
+#: articles/templates/article_edit.html:21
+msgid "Insert asset as link"
+msgstr ""
+
+#: articles/templates/article_edit.html:22
+msgid "Insert asset as picture"
+msgstr ""
+
+#: articles/templates/asset_confirm_delete.html:6
+#: articles/templates/asset_edit.html:6
+msgid "Asset"
+msgstr ""
+
+#: articles/templates/asset_confirm_delete.html:10
+msgid "Are you sure you want to delete asset"
+msgstr ""
+
+#: articles/templates/asset_confirm_delete.html:10
+msgid "and related file"
+msgstr ""
 
 #: articles/templates/base.html:20
 msgid "__website_name_1__"
@@ -34,13 +100,13 @@ msgstr "Jednoduchá moderní CMS šablona"
 
 #: articles/templates/base.html:27
 msgid "Home"
-msgstr "Home"
+msgstr "Domů"
 
 #: articles/templates/base.html:29
 msgid "Redaction"
 msgstr "Redakce"
 
-#: articles/templates/base.html:31
+#: articles/templates/base.html:31 articles/templates/contact.html:8
 msgid "Contact Us"
 msgstr "Kontaktujte nás"
 
@@ -52,9 +118,177 @@ msgstr "Odhlásit"
 msgid "Login"
 msgstr "Přihlásit"
 
+#: articles/templates/base_with_sidebar.html:9
+msgid "Latest News"
+msgstr ""
+
+#: articles/templates/base_with_sidebar.html:18
+msgid "No shorts"
+msgstr ""
+
+#: articles/templates/base_with_sidebar.html:20
+#: articles/templates/redaction.html:12
+msgid "Useful Links"
+msgstr ""
+
+#: articles/templates/base_with_sidebar.html:27
+msgid "No links"
+msgstr ""
+
+#: articles/templates/base_with_sidebar.html:30
+msgid "Search"
+msgstr ""
+
+#: articles/templates/contact.html:9
+msgid ""
+"We are looking forward to you feedback, suggestions, ideas or your articles."
+msgstr ""
+
+#: articles/templates/contact.html:13
+msgid "Name"
+msgstr ""
+
+#: articles/templates/contact.html:14
+msgid "Email Address"
+msgstr ""
+
+#: articles/templates/contact.html:15
+msgid "Message"
+msgstr ""
+
+#: articles/templates/contact.html:19
+msgid "We will respond you as soon as possible."
+msgstr ""
+
+#: articles/templates/homepage.html:16
+msgid "No articles"
+msgstr ""
+
+#: articles/templates/homepage.html:20
+#: articles/templates/redaction_article.html:35
+#: articles/templates/redaction_asset.html:33
+#: articles/templates/redaction_short.html:35
+#: articles/templates/redaction_useful_link.html:35
+msgid "Previous"
+msgstr ""
+
+#: articles/templates/homepage.html:24
+#: articles/templates/redaction_article.html:39
+#: articles/templates/redaction_asset.html:37
+#: articles/templates/redaction_short.html:39
+#: articles/templates/redaction_useful_link.html:39
+msgid "Next"
+msgstr ""
+
+#: articles/templates/redaction.html:7
+#: articles/templates/redaction_useful_link.html:8
+msgid "Redaction - Useful Links"
+msgstr ""
+
+#: articles/templates/redaction.html:9
+msgid "Articles"
+msgstr ""
+
+#: articles/templates/redaction.html:11
+msgid "Shorts"
+msgstr ""
+
+#: articles/templates/redaction_article.html:8
+#, fuzzy
+#| msgid "Redaction"
+msgid "Redaction - Articles"
+msgstr "Redakce"
+
+#: articles/templates/redaction_article.html:10
+msgid "Create new article"
+msgstr ""
+
+#: articles/templates/redaction_article.html:14
+#: articles/templates/redaction_short.html:14
+msgid "Author"
+msgstr ""
+
+#: articles/templates/redaction_article.html:15
+#: articles/templates/redaction_asset.html:15
+#: articles/templates/redaction_short.html:15
+msgid "Created"
+msgstr ""
+
+#: articles/templates/redaction_article.html:16
+#: articles/templates/redaction_short.html:16
+#: articles/templates/redaction_useful_link.html:16
+msgid "Published"
+msgstr ""
+
+#: articles/templates/redaction_article.html:27
+#: articles/templates/redaction_short.html:27
+#: articles/templates/redaction_useful_link.html:27
+msgid "Edit"
+msgstr ""
+
+#: articles/templates/redaction_asset.html:8
+#, fuzzy
+#| msgid "Redaction"
+msgid "Redaction - Assets"
+msgstr "Redakce"
+
+#: articles/templates/redaction_asset.html:10
+msgid "Create new asset"
+msgstr ""
+
+#: articles/templates/redaction_asset.html:16
+msgid "File"
+msgstr ""
+
+#: articles/templates/redaction_short.html:8
+#, fuzzy
+#| msgid "Redaction"
+msgid "Redaction - Shorts"
+msgstr "Redakce"
+
+#: articles/templates/redaction_short.html:10
+msgid "Create new short"
+msgstr ""
+
+#: articles/templates/redaction_short.html:13
+#: articles/templates/redaction_useful_link.html:14
+msgid "Header"
+msgstr ""
+
+#: articles/templates/redaction_useful_link.html:10
+msgid "Create new useful link"
+msgstr ""
+
+#: articles/templates/redaction_useful_link.html:13
+msgid "Order"
+msgstr ""
+
+#: articles/templates/redaction_useful_link.html:15
+msgid "Link"
+msgstr ""
+
+#: articles/templates/short_confirm_delete.html:6
+#: articles/templates/short_edit.html:6
+msgid "Short"
+msgstr ""
+
+#: articles/templates/short_confirm_delete.html:10
+msgid "Are you sure you want to delete short"
+msgstr ""
+
+#: articles/templates/useful_link_confirm_delete.html:6
+#: articles/templates/useful_link_edit.html:6
+msgid "Useful link"
+msgstr ""
+
+#: articles/templates/useful_link_confirm_delete.html:10
+msgid "Are you sure you want to delete useful link"
+msgstr ""
+
 #: articles/views.py:27
 msgid "Search: Keyword '{}' is too short. Type at least 3 characters."
-msgstr "Vyhledat: Hledaný výraz '{}' je příliš krátký. Zadejte alespoň 3 znaky."
+msgstr ""
+"Vyhledat: Hledaný výraz '{}' je příliš krátký. Zadejte alespoň 3 znaky."
 
 #: articles/views.py:30
 msgid "Search: Keyword is too long. Type maximum of 100 characters."

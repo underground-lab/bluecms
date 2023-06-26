@@ -1,16 +1,17 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 <body>
     {% block sitecontent %}
-    <h1>Short</h1>
+    <h1>{% trans 'Short' %}</h1>
     <form action="" method="post">
         {% csrf_token %}
         {% if request.user.is_superuser %}
-            Are you sure you want to delete short <b>{{ object.header }}</b>?
+            {% trans 'Are you sure you want to delete short' %} <b>{{ object.header }}</b>?
             <br><br>
             <div class="form_settings">
-                <button class="submit" type="submit">Delete</button>&emsp;&emsp;
-                <a role="button" href="{% url 'redaction_short' %}">Cancel</a>
+                <button class="submit" type="submit">{% trans 'Delete' %}</button>&emsp;&emsp;
+                <a role="button" href="{% url 'redaction_short' %}">{% trans 'Cancel' %}</a>
             </div>
         {% else %}
             The logged in user is not a superuser.

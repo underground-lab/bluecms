@@ -1,15 +1,15 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load static %}
 
 <body>
     {% block sitecontent %}
-    <h1>Redaction</h1>
+    <h1>{% trans 'Redaction - Useful Links' %}Redaction</h1>
     <ul>
-        <li><a href="{% url 'redaction_article' %}">Articles</a></li>
-        <li><a href="{% url 'redaction_asset' %}">Assets</a></li>
-        <li><a href="{% url 'redaction_short' %}">Shorts</a></li>
-        <li><a href="{% url 'redaction_useful_link' %}">Useful Links</a></li>
-        <li>Settings</li>
+        <li><a href="{% url 'redaction_article' %}">{% trans 'Articles' %}</a></li>
+        <li><a href="{% url 'redaction_asset' %}">{% trans 'Assets' %}</a></li>
+        <li><a href="{% url 'redaction_short' %}">{% trans 'Shorts' %}</a></li>
+        <li><a href="{% url 'redaction_useful_link' %}">{% trans 'Useful Links' %}</a></li>
     </ul>
     {% endblock %}
 </body>
