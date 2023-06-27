@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-27 19:50+0200\n"
+"POT-Creation-Date: 2023-06-28 00:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,49 +17,49 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: articles/forms.py:12 articles/forms.py:25 articles/forms.py:37
+#: articles/models.py:8 articles/models.py:28 articles/models.py:39
 #: articles/templates/redaction_short.html:13
 #: articles/templates/redaction_useful_link.html:14
 msgid "Header"
 msgstr "Header"
 
-#: articles/forms.py:13 articles/forms.py:26 articles/forms.py:39
+#: articles/models.py:11 articles/models.py:31 articles/models.py:42
 #: articles/templates/redaction_article.html:16
 #: articles/templates/redaction_short.html:16
 #: articles/templates/redaction_useful_link.html:16
 msgid "Published"
 msgstr "Published"
 
-#: articles/forms.py:14
+#: articles/models.py:12
 msgid "Perex (markdown)"
 msgstr "Perex (markdown)"
 
-#: articles/forms.py:15 articles/forms.py:27
+#: articles/models.py:13 articles/models.py:32
 msgid "Body (markdown)"
 msgstr "Body (markdown)"
 
-#: articles/forms.py:38 articles/templates/redaction_useful_link.html:15
+#: articles/models.py:40 articles/templates/redaction_useful_link.html:15
 msgid "Link"
 msgstr "Link"
 
-#: articles/forms.py:40 articles/templates/redaction_useful_link.html:13
+#: articles/models.py:41 articles/templates/redaction_useful_link.html:13
 msgid "Order"
 msgstr "Order"
 
-#: articles/forms.py:50 articles/templates/article_edit.html:20
+#: articles/models.py:53 articles/templates/article_edit.html:20
 #: articles/templates/redaction_asset.html:13
 msgid "Description"
 msgstr "Description"
 
-#: articles/forms.py:51 articles/templates/article_edit.html:6
+#: articles/models.py:54 articles/templates/redaction_asset.html:16
+msgid "File"
+msgstr "File"
+
+#: articles/models.py:55 articles/templates/article_edit.html:6
 #: articles/templates/redaction_article.html:13
 #: articles/templates/redaction_asset.html:14
 msgid "Article"
 msgstr "Article"
-
-#: articles/forms.py:52 articles/templates/redaction_asset.html:16
-msgid "File"
-msgstr "File"
 
 #: articles/templates/article_confirm_delete.html:10
 msgid "Are you sure you want to delete article"
