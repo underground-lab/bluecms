@@ -7,12 +7,6 @@ class ArticleForm(ModelForm):
     class Meta:
         model = Article
         fields = ('header', 'perex', 'body', 'published')
-        # labels = {
-        #     "header": "Header",
-        #     "published": "Published",
-        #     "perex": "Perex (markdown)",
-        #     "body": "Body (markdown)",
-        # }
 
 
 class ShortForm(ModelForm):
