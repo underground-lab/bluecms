@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-26 23:38+0200\n"
+"POT-Creation-Date: 2023-06-27 19:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,50 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
 "<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: articles/forms.py:12 articles/forms.py:25 articles/forms.py:37
+#: articles/templates/redaction_short.html:13
+#: articles/templates/redaction_useful_link.html:14
+msgid "Header"
+msgstr "Hlavička"
+
+#: articles/forms.py:13 articles/forms.py:26 articles/forms.py:39
+#: articles/templates/redaction_article.html:16
+#: articles/templates/redaction_short.html:16
+#: articles/templates/redaction_useful_link.html:16
+msgid "Published"
+msgstr "Publikován"
+
+#: articles/forms.py:14
+msgid "Perex (markdown)"
+msgstr "Perex (markdown)"
+
+#: articles/forms.py:15 articles/forms.py:27
+msgid "Body (markdown)"
+msgstr "Tělo (markdown)"
+
+#: articles/forms.py:38 articles/templates/redaction_useful_link.html:15
+msgid "Link"
+msgstr "Odkaz"
+
+#: articles/forms.py:40 articles/templates/redaction_useful_link.html:13
+msgid "Order"
+msgstr "Pořadí"
+
+#: articles/forms.py:50 articles/templates/article_edit.html:20
+#: articles/templates/redaction_asset.html:13
+msgid "Description"
+msgstr "Popis"
+
+#: articles/forms.py:51 articles/templates/article_edit.html:6
+#: articles/templates/redaction_article.html:13
+#: articles/templates/redaction_asset.html:14
+msgid "Article"
+msgstr "Článek"
+
+#: articles/forms.py:52 articles/templates/redaction_asset.html:16
+msgid "File"
+msgstr "Soubor"
 
 #: articles/templates/article_confirm_delete.html:10
 msgid "Are you sure you want to delete article"
@@ -41,12 +85,6 @@ msgstr "Smazat"
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: articles/templates/article_edit.html:6
-#: articles/templates/redaction_article.html:13
-#: articles/templates/redaction_asset.html:14
-msgid "Article"
-msgstr "Článek"
-
 #: articles/templates/article_edit.html:11
 #: articles/templates/asset_edit.html:11 articles/templates/contact.html:16
 #: articles/templates/short_edit.html:11
@@ -57,11 +95,6 @@ msgstr "odeslat"
 #: articles/templates/article_edit.html:17 articles/templates/redaction.html:10
 msgid "Assets"
 msgstr "Přílohy"
-
-#: articles/templates/article_edit.html:20
-#: articles/templates/redaction_asset.html:13
-msgid "Description"
-msgstr "Popis"
 
 #: articles/templates/article_edit.html:21
 msgid "Insert asset as link"
@@ -116,6 +149,14 @@ msgstr "Odhlásit"
 msgid "Login"
 msgstr "Přihlásit"
 
+#: articles/templates/base.html:55
+msgid "__website_copyright__"
+msgstr ""
+"blueCopyright &copy; colour_blue | <a href='http://validator.w3.org/check?"
+"uri=referer'>HTML5</a> | <a href='http://jigsaw.w3.org/css-validator/check/"
+"referer'>CSS</a> | <a href='http://www.html5webtemplates.co.uk'>design from "
+"HTML5webtemplates.co.uk</a>"
+
 #: articles/templates/base_with_sidebar.html:9
 msgid "Latest News"
 msgstr "Zprávičky"
@@ -136,6 +177,10 @@ msgstr "Žádné odkazy"
 #: articles/templates/base_with_sidebar.html:30
 msgid "Search"
 msgstr "Vyhledat"
+
+#: articles/templates/base_with_sidebar.html:34
+msgid "Enter keywords"
+msgstr "Hledaný výraz"
 
 #: articles/templates/contact.html:9
 msgid ""
@@ -210,12 +255,6 @@ msgstr "Autor"
 msgid "Created"
 msgstr "Vytvořen"
 
-#: articles/templates/redaction_article.html:16
-#: articles/templates/redaction_short.html:16
-#: articles/templates/redaction_useful_link.html:16
-msgid "Published"
-msgstr "Publikován"
-
 #: articles/templates/redaction_article.html:27
 #: articles/templates/redaction_short.html:27
 #: articles/templates/redaction_useful_link.html:27
@@ -230,10 +269,6 @@ msgstr "Redakce - Přílohy"
 msgid "Create new asset"
 msgstr "Vytvořit novou přílohu"
 
-#: articles/templates/redaction_asset.html:16
-msgid "File"
-msgstr "Soubor"
-
 #: articles/templates/redaction_short.html:8
 msgid "Redaction - Shorts"
 msgstr "Redakce - Zprávičky"
@@ -242,22 +277,9 @@ msgstr "Redakce - Zprávičky"
 msgid "Create new short"
 msgstr "Vytvořit novou zprávičku"
 
-#: articles/templates/redaction_short.html:13
-#: articles/templates/redaction_useful_link.html:14
-msgid "Header"
-msgstr "Hlavička"
-
 #: articles/templates/redaction_useful_link.html:10
 msgid "Create new useful link"
 msgstr "Vytvořit nový užitečný odkaz"
-
-#: articles/templates/redaction_useful_link.html:13
-msgid "Order"
-msgstr "Pořadí"
-
-#: articles/templates/redaction_useful_link.html:15
-msgid "Link"
-msgstr "Odkaz"
 
 #: articles/templates/short_confirm_delete.html:6
 #: articles/templates/short_edit.html:6
