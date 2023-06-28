@@ -1,16 +1,17 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 <body>
     {% block sitecontent %}
-    <h1>Asset</h1>
+    <h1>{% trans 'Asset' %}</h1>
     <form action="" method="post">
         {% csrf_token %}
         {% if request.user.is_superuser %}
-            Are you sure you want to delete asset <b>{{ object.description }}</b> and related file <b>{{ object.file }}</b>?
+            {% trans 'Are you sure you want to delete asset' %} <b>{{ object.description }}</b> {% trans 'and related file' %} <b>{{ object.file }}</b>?
             <br><br>
             <div class="form_settings">
-                <button class="submit" type="submit">Delete</button>&emsp;&emsp;
-                <a role="button" href="{% url 'redaction_asset' %}">Cancel</a>
+                <button class="submit" type="submit">{% trans 'Delete' %}</button>&emsp;&emsp;
+                <a role="button" href="{% url 'redaction_asset' %}">{% trans 'Cancel' %}</a>
             </div>
         {% else %}
             The logged in user is not a superuser.

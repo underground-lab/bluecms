@@ -1,20 +1,21 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load static %}
 
 <body>
     {% block sitecontent %}
     <!-- insert the page content here -->
-    <h1>Contact Us</h1>
-    <p>Below is an example of how a contact form might look with this template:</p>
+    <h1>{% trans 'Contact Us' %}</h1>
+    <p>{% trans 'We are looking forward to you feedback, suggestions, ideas or your articles.' %}</p>
     <form action="contact" method="post">
       <div class="form_settings">
         {% csrf_token %}
-        <p><span>Name</span><input class="contact" type="text" name="your_name" value="" /></p>
-        <p><span>Email Address</span><input class="contact" type="text" name="your_email" value="" /></p>
-        <p><span>Message</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
-        <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
+        <p><span>{% trans 'Name' %}</span><input class="contact" type="text" name="your_name" value="" /></p>
+        <p><span>{% trans 'Email Address' %}</span><input class="contact" type="text" name="your_email" value="" /></p>
+        <p><span>{% trans 'Message' %}</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
+        <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="{% trans 'submit' %}" /></p>
       </div>
     </form>
-    <p><br /><br />NOTE: A contact form such as this would require some way of emailing the input to an email address.</p>
+    <p><br /><br />{% trans 'We will respond you as soon as possible.' %}</p>
     {% endblock %}
 </body>

@@ -1,16 +1,17 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 <body>
     {% block sitecontent %}
-    <h1>Useful link</h1>
+    <h1>{% trans 'Useful link' %}</h1>
     <form action="" method="post">
         {% csrf_token %}
         {% if request.user.is_superuser %}
-            Are you sure you want to delete useful link <b>{{ object.header }}</b>?
+            {% trans 'Are you sure you want to delete useful link' %} <b>{{ object.header }}</b>?
             <br><br>
             <div class="form_settings">
-                <button class="submit" type="submit">Delete</button>&emsp;&emsp;
-                <a role="button" href="{% url 'redaction_useful_link' %}">Cancel</a>
+                <button class="submit" type="submit">{% trans 'Delete' %}</button>&emsp;&emsp;
+                <a role="button" href="{% url 'redaction_useful_link' %}">{% trans 'Cancel' %}</a>
             </div>
         {% else %}
             The logged in user is not a superuser.
