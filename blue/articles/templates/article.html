@@ -6,7 +6,7 @@
 <body>+
     {% block sitecontent %}
     <h1>{{ object.header | highlight:search }}</h1>
-    <p>{{ object.created_date|date:"jS M Y" }} - {{ object.author }}</p>
+    <p>{{ object.created_date|date:"d.m.Y" }} - {{ object.author }}</p>
     {{ object.perex | highlight:search | markdown | safe}}
     {{ object.body | highlight:search | markdown | safe }}
     {% endblock %}

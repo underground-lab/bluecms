@@ -21,7 +21,7 @@
         <tr>
             <td>{{ obj.description }}</td>
             <td>{{ obj.article.header }}</td>
-            <td>{{ obj.created_date|date:"jS M Y" }}</td>
+            <td>{{ obj.created_date|date:"d.m.Y" }}</td>
             <td>{{ obj.file }}</td>
             <td>[<a href="{% url 'asset_delete' obj.pk %}">{% trans 'Delete' %}</a>]</td>
         </tr>

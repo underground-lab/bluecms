@@ -22,7 +22,7 @@
         <tr>
             <td><a href="{% url 'article' obj.pk %}">{{ obj.header }}</a></td>
             <td>{{ obj.author }}</td>
-            <td>{{ obj.created_date|date:"jS M Y" }}</td>
+            <td>{{ obj.created_date|date:"d.m.Y" }}</td>
             <td>{{ obj.published }}</td>
             <td>[<a href="{% url 'article_update' obj.pk %}">{% trans 'Edit' %}</a>]</td>
             <td>[<a href="{% url 'article_delete' obj.pk %}">{% trans 'Delete' %}</a>]</td>
