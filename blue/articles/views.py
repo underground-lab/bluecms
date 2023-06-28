@@ -381,9 +381,9 @@ def contact(request):
         your_enquiry = request.POST.get('your_enquiry')
 
         if settings.EMAIL_HOST == '':
-            messages.error(request, "Error: It seems E-Mail system is not configured yet.")
+            messages.error(request, _("Error: It seems E-Mail system is not configured yet."))
         elif not validate_email_address(your_email):
-            messages.error(request, f"Error: {your_email} seems not to be valid e-mail address.")
+            messages.error(request, _("Error: {} seems not to be valid e-mail address.").format(your_email))
         else:
             recipientlist = [settings.EMAIL_RECIPIENT, ]
             send_mail(
@@ -392,7 +392,7 @@ def contact(request):
                 settings.EMAIL_HOST_USER,
                 recipientlist
             )
-            messages.success(request, "Your inquiry has been sent.")
+            messages.success(request, _("Your inquiry has been sent."))
 
         return render(request, 'contact.html', context=context)
     else:
