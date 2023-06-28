@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 00:05+0200\n"
+"POT-Creation-Date: 2023-06-28 19:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -311,3 +311,15 @@ msgstr "Vyhledat: Hledaný výraz je příliš dlouhý. Zadejte maximálně 100 
 #: articles/views.py:38
 msgid "Searching for '{}': {} articles found."
 msgstr "Vyhledat '{}': nalezeno {} článků."
+
+#: articles/views.py:384
+msgid "Error: It seems E-Mail system is not configured yet."
+msgstr "Nastala chyba: Zdá se, že e-mailový systém není nakonfigurovaný."
+
+#: articles/views.py:386
+msgid "Error: {} seems not to be valid e-mail address."
+msgstr "Nastala chyba: {} nevypadá jako platná e-mailová adresa."
+
+#: articles/views.py:395
+msgid "Your inquiry has been sent."
+msgstr "Zpráva byla odeslána."
