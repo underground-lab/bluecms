@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 20:10+0200\n"
+"POT-Creation-Date: 2023-06-29 19:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,6 +92,7 @@ msgid "submit"
 msgstr "submit"
 
 #: articles/templates/article_edit.html:17 articles/templates/redaction.html:10
+#: articles/templates/redaction_asset.html:8
 msgid "Assets"
 msgstr "Assets"
 
@@ -132,7 +133,7 @@ msgstr "Simple. Contemporary. CMS Template."
 msgid "Home"
 msgstr "Home"
 
-#: articles/templates/base.html:29
+#: articles/templates/base.html:29 articles/templates/redaction.html:7
 msgid "Redaction"
 msgstr "Redaction"
 
@@ -166,6 +167,7 @@ msgstr "No shorts"
 
 #: articles/templates/base_with_sidebar.html:20
 #: articles/templates/redaction.html:12
+#: articles/templates/redaction_useful_link.html:8
 msgid "Useful Links"
 msgstr "Useful Links"
 
@@ -223,22 +225,15 @@ msgstr "Previous"
 msgid "Next"
 msgstr "Next"
 
-#: articles/templates/redaction.html:7
-#: articles/templates/redaction_useful_link.html:8
-msgid "Redaction - Useful Links"
-msgstr "Redaction - Useful Links"
-
 #: articles/templates/redaction.html:9
+#: articles/templates/redaction_article.html:8
 msgid "Articles"
 msgstr "Articles"
 
 #: articles/templates/redaction.html:11
+#: articles/templates/redaction_short.html:8
 msgid "Shorts"
 msgstr "Shorts"
-
-#: articles/templates/redaction_article.html:8
-msgid "Redaction - Articles"
-msgstr "Redaction - Articles"
 
 #: articles/templates/redaction_article.html:10
 msgid "Create new article"
@@ -261,17 +256,9 @@ msgstr "Created"
 msgid "Edit"
 msgstr "Edit"
 
-#: articles/templates/redaction_asset.html:8
-msgid "Redaction - Assets"
-msgstr "Redaction - Assets"
-
 #: articles/templates/redaction_asset.html:10
 msgid "Create new asset"
 msgstr "Create new asset"
-
-#: articles/templates/redaction_short.html:8
-msgid "Redaction - Shorts"
-msgstr "Redaction - Shorts"
 
 #: articles/templates/redaction_short.html:10
 msgid "Create new short"
@@ -322,3 +309,15 @@ msgstr "Error: {} seems not to be valid e-mail address."
 #: articles/views.py:395
 msgid "Your inquiry has been sent."
 msgstr "Your inquiry has been sent."
+
+#~ msgid "Redaction - Useful Links"
+#~ msgstr "Redaction - Useful Links"
+
+#~ msgid "Redaction - Articles"
+#~ msgstr "Redaction - Articles"
+
+#~ msgid "Redaction - Assets"
+#~ msgstr "Redaction - Assets"
+
+#~ msgid "Redaction - Shorts"
+#~ msgstr "Redaction - Shorts"

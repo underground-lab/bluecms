@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 19:58+0200\n"
+"POT-Creation-Date: 2023-06-29 19:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,6 +93,7 @@ msgid "submit"
 msgstr "odeslat"
 
 #: articles/templates/article_edit.html:17 articles/templates/redaction.html:10
+#: articles/templates/redaction_asset.html:8
 msgid "Assets"
 msgstr "Přílohy"
 
@@ -133,7 +134,7 @@ msgstr "Jednoduchá moderní CMS šablona"
 msgid "Home"
 msgstr "Domů"
 
-#: articles/templates/base.html:29
+#: articles/templates/base.html:29 articles/templates/redaction.html:7
 msgid "Redaction"
 msgstr "Redakce"
 
@@ -167,6 +168,7 @@ msgstr "Žádné zprávičky"
 
 #: articles/templates/base_with_sidebar.html:20
 #: articles/templates/redaction.html:12
+#: articles/templates/redaction_useful_link.html:8
 msgid "Useful Links"
 msgstr "Užitečné odkazy"
 
@@ -223,22 +225,15 @@ msgstr "Předchozí"
 msgid "Next"
 msgstr "Následující"
 
-#: articles/templates/redaction.html:7
-#: articles/templates/redaction_useful_link.html:8
-msgid "Redaction - Useful Links"
-msgstr "Redakce - Užitečné odkazy"
-
 #: articles/templates/redaction.html:9
+#: articles/templates/redaction_article.html:8
 msgid "Articles"
 msgstr "Články"
 
 #: articles/templates/redaction.html:11
+#: articles/templates/redaction_short.html:8
 msgid "Shorts"
 msgstr "Zprávičky"
-
-#: articles/templates/redaction_article.html:8
-msgid "Redaction - Articles"
-msgstr "Redakce - Články"
 
 #: articles/templates/redaction_article.html:10
 msgid "Create new article"
@@ -261,17 +256,9 @@ msgstr "Vytvořen"
 msgid "Edit"
 msgstr "Upravit"
 
-#: articles/templates/redaction_asset.html:8
-msgid "Redaction - Assets"
-msgstr "Redakce - Přílohy"
-
 #: articles/templates/redaction_asset.html:10
 msgid "Create new asset"
 msgstr "Vytvořit novou přílohu"
-
-#: articles/templates/redaction_short.html:8
-msgid "Redaction - Shorts"
-msgstr "Redakce - Zprávičky"
 
 #: articles/templates/redaction_short.html:10
 msgid "Create new short"
@@ -323,3 +310,15 @@ msgstr "Nastala chyba: {} nevypadá jako platná e-mailová adresa."
 #: articles/views.py:395
 msgid "Your inquiry has been sent."
 msgstr "Zpráva byla odeslána."
+
+#~ msgid "Redaction - Useful Links"
+#~ msgstr "Redakce - Užitečné odkazy"
+
+#~ msgid "Redaction - Articles"
+#~ msgstr "Redakce - Články"
+
+#~ msgid "Redaction - Assets"
+#~ msgstr "Redakce - Přílohy"
+
+#~ msgid "Redaction - Shorts"
+#~ msgstr "Redakce - Zprávičky"
