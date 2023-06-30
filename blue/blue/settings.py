@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -150,6 +151,13 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_RECIPIENT = ''
+
+# BlueCms constants
+
+BLUECMS_TITLE1 = 'blue'
+BLUECMS_TITLE2 = 'cms'
+BLUECMS_SUBTITLE = _('Simple. Contemporary. CMS Template.')
+BLUECMS_FOOTER = "blueCopyright &copy; colour_blue | <a href='http://validator.w3.org/check?uri=referer'>HTML5</a> | <a href='http://jigsaw.w3.org/css-validator/check/referer'>CSS</a> | <a href='http://www.html5webtemplates.co.uk'>design from HTML5webtemplates.co.uk</a>"
 
 # Load local settings if exists
 try:
