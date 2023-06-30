@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load custom_tags %}
 
 <!DOCTYPE HTML>
 <html>
@@ -8,7 +9,7 @@
     {% if head is not None %}
       {{ head }}
     {% else %}
-      {% trans '__website_name_1__' %}{% trans '__website_name_2__' %}
+      {% settings_value "BLUECMS_TITLE1" %}{% settings_value "BLUECMS_TITLE2" %}
     {% endif %}
   </title>
 
@@ -24,7 +25,7 @@
       <div id="logo">
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><a href="/"><span class="logo_colour">{% trans '__website_name_1__' %}</span>{% trans '__website_name_2__' %}</a></h1>
+          <h1><a href="/"><span class="logo_colour">{% settings_value "BLUECMS_TITLE1" %}</span>{% settings_value "BLUECMS_TITLE2" %}</a></h1>
           <h2>{% trans 'Simple. Contemporary. CMS Template.' %}</h2>
         </div>
       </div>

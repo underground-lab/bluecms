@@ -151,6 +151,11 @@ EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_RECIPIENT = ''
 
+# BlueCms constants
+
+BLUECMS_TITLE1 = 'blue'
+BLUECMS_TITLE2 = 'cms'
+
 # Load local settings if exists
 try:
     from .local_settings import *
