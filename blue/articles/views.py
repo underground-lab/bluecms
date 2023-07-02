@@ -51,6 +51,8 @@ class ArticleListView(ListView):
         context['useful_links'] = UsefulLink.objects.filter(published=True).order_by('order')
         context['menu'] = 1
         context['search'] = ''
+        if settings.BLUECMS_GOOGLE_ANALYTICS is not None:
+            context['google_analitics'] = settings.BLUECMS_GOOGLE_ANALYTICS
         return context
 
 
@@ -63,6 +65,8 @@ class ArticleDetailView(DetailView):
         context['menu'] = 1
         context['head'] = context['object'].header
         context['search'] = self.request.GET.get('search', '')
+        if settings.BLUECMS_GOOGLE_ANALYTICS is not None:
+            context['google_analitics'] = settings.BLUECMS_GOOGLE_ANALYTICS
         if not self.request.user.is_active and not context['object'].published:
             raise Http404
         return context
@@ -374,6 +378,9 @@ def contact(request):
     context = {
         'menu': 3,
     }
+
+    if settings.BLUECMS_GOOGLE_ANALYTICS is not None:
+        context['google_analitics'] = settings.BLUECMS_GOOGLE_ANALYTICS
 
     if request.method == 'POST':
         your_name = request.POST.get('your_name')
