@@ -23,7 +23,6 @@ class Article(models.Model):
         ordering = ['-id']
 
 
-
 class Short(models.Model):
     header = models.CharField(_("Header"), max_length=100)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -34,6 +33,9 @@ class Short(models.Model):
     def __str__(self):
         return f"Short: {self.header}"
 
+    class Meta:
+        ordering = ['-id']
+
 
 class UsefulLink(models.Model):
     header = models.CharField(_("Header"), max_length=100)
@@ -43,6 +45,9 @@ class UsefulLink(models.Model):
 
     def __str__(self):
         return f"UsefulLink: {self.header}"
+
+    class Meta:
+        ordering = ['order']
 
 
 def article_directory_path(instance, filename):
@@ -62,3 +67,6 @@ class Asset(models.Model):
         if os.path.isfile(self.file.path):
             os.remove(self.file.path)
         super(Asset, self).delete(*args, **kwargs)
+
+    class Meta:
+        ordering = ['-id']
