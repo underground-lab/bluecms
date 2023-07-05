@@ -156,8 +156,11 @@ EMAIL_RECIPIENT = ''
 BLUECMS_TITLE1 = 'blue'
 BLUECMS_TITLE2 = 'cms'
 BLUECMS_SUBTITLE = 'Simple. Contemporary. CMS Template.'
+BLUECMS_DESCRIPTION = 'website description'
+BLUECMS_KEYWORDS = 'website keywords, website keywords'
 BLUECMS_FOOTER = "blueCopyright &copy; colour_blue | <a href='http://validator.w3.org/check?uri=referer'>HTML5</a> | <a href='http://jigsaw.w3.org/css-validator/check/referer'>CSS</a> | <a href='http://www.html5webtemplates.co.uk'>design from HTML5webtemplates.co.uk</a>"
 BLUECMS_GOOGLE_ANALYTICS = None
+
 
 # Load local settings if exists
 try:
