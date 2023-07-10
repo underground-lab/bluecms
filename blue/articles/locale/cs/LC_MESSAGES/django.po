@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-30 19:22+0200\n"
+"POT-Creation-Date: 2023-07-10 20:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,13 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
 "<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
-#: articles/models.py:8 articles/models.py:28 articles/models.py:39
+#: articles/models.py:8 articles/models.py:27 articles/models.py:41
 #: articles/templates/redaction_short.html:13
 #: articles/templates/redaction_useful_link.html:14
 msgid "Header"
 msgstr "Hlavička"
 
-#: articles/models.py:11 articles/models.py:31 articles/models.py:42
+#: articles/models.py:11 articles/models.py:30 articles/models.py:44
 #: articles/templates/redaction_article.html:16
 #: articles/templates/redaction_short.html:16
 #: articles/templates/redaction_useful_link.html:16
@@ -36,28 +36,28 @@ msgstr "Publikován"
 msgid "Perex (markdown)"
 msgstr "Perex (markdown)"
 
-#: articles/models.py:13 articles/models.py:32
+#: articles/models.py:13 articles/models.py:31
 msgid "Body (markdown)"
 msgstr "Tělo (markdown)"
 
-#: articles/models.py:40 articles/templates/redaction_useful_link.html:15
+#: articles/models.py:42 articles/templates/redaction_useful_link.html:15
 msgid "Link"
 msgstr "Odkaz"
 
-#: articles/models.py:41 articles/templates/redaction_useful_link.html:13
+#: articles/models.py:43 articles/templates/redaction_useful_link.html:13
 msgid "Order"
 msgstr "Pořadí"
 
-#: articles/models.py:53 articles/templates/article_edit.html:20
+#: articles/models.py:58 articles/templates/article_edit.html:20
 #: articles/templates/redaction_asset.html:13
 msgid "Description"
 msgstr "Popis"
 
-#: articles/models.py:54 articles/templates/redaction_asset.html:16
+#: articles/models.py:59 articles/templates/redaction_asset.html:16
 msgid "File"
 msgstr "Soubor"
 
-#: articles/models.py:55 articles/templates/article_edit.html:6
+#: articles/models.py:60 articles/templates/article_edit.html:6
 #: articles/templates/redaction_article.html:13
 #: articles/templates/redaction_asset.html:14
 msgid "Article"
@@ -118,56 +118,71 @@ msgstr "Chcete smazat přílohu"
 msgid "and related file"
 msgstr "a související soubor"
 
-#: articles/templates/base.html:35
+#: articles/templates/base.html:49
 msgid "Home"
 msgstr "Domů"
 
-#: articles/templates/base.html:37 articles/templates/redaction.html:7
+#: articles/templates/base.html:51 articles/templates/redaction.html:7
 msgid "Redaction"
 msgstr "Redakce"
 
-#: articles/templates/base.html:39 articles/templates/contact.html:8
+#: articles/templates/base.html:53 articles/templates/contact.html:8
 msgid "Contact Us"
 msgstr "Kontaktujte nás"
 
-#: articles/templates/base.html:41
+#: articles/templates/base.html:55
 msgid "Logout"
 msgstr "Odhlásit"
 
-#: articles/templates/base.html:43
+#: articles/templates/base.html:57
 msgid "Login"
 msgstr "Přihlásit"
+
+#: articles/templates/base_paginated.html:14
+#: articles/templates/base_with_sidebar.html:48
+msgid "Previous"
+msgstr "Předchozí"
+
+#: articles/templates/base_paginated.html:18
+#: articles/templates/base_with_sidebar.html:52
+msgid "Next"
+msgstr "Následující"
 
 #: articles/templates/base_with_sidebar.html:9
 msgid "Latest News"
 msgstr "Zprávičky"
 
-#: articles/templates/base_with_sidebar.html:18
+#: articles/templates/base_with_sidebar.html:16
+msgid "More news"
+msgstr "Další zprávičky"
+
+#: articles/templates/base_with_sidebar.html:19
+#: articles/templates/shorts.html:19
 msgid "No shorts"
 msgstr "Žádné zprávičky"
 
-#: articles/templates/base_with_sidebar.html:20
+#: articles/templates/base_with_sidebar.html:21
 #: articles/templates/redaction.html:12
 #: articles/templates/redaction_useful_link.html:8
 msgid "Useful Links"
 msgstr "Užitečné odkazy"
 
-#: articles/templates/base_with_sidebar.html:27
+#: articles/templates/base_with_sidebar.html:28
 msgid "No links"
 msgstr "Žádné odkazy"
 
-#: articles/templates/base_with_sidebar.html:30
+#: articles/templates/base_with_sidebar.html:31
 msgid "Search"
 msgstr "Vyhledat"
 
-#: articles/templates/base_with_sidebar.html:34
+#: articles/templates/base_with_sidebar.html:35
 msgid "Enter keywords"
 msgstr "Hledaný výraz"
 
 #: articles/templates/contact.html:9
 msgid ""
 "We are looking forward to you feedback, suggestions, ideas or your articles."
-msgstr "Těšíme se na Vaší zpětnou vazbu, doporučení, nápady nebo články."
+msgstr "Těšíme se na Vaši zpětnou vazbu, doporučení, nápady nebo články."
 
 #: articles/templates/contact.html:13
 msgid "Name"
@@ -189,29 +204,13 @@ msgstr "Odpovíme Vám v co možná nejkratší době."
 msgid "No articles"
 msgstr "Žádné články"
 
-#: articles/templates/homepage.html:20
-#: articles/templates/redaction_article.html:35
-#: articles/templates/redaction_asset.html:33
-#: articles/templates/redaction_short.html:35
-#: articles/templates/redaction_useful_link.html:35
-msgid "Previous"
-msgstr "Předchozí"
-
-#: articles/templates/homepage.html:24
-#: articles/templates/redaction_article.html:39
-#: articles/templates/redaction_asset.html:37
-#: articles/templates/redaction_short.html:39
-#: articles/templates/redaction_useful_link.html:39
-msgid "Next"
-msgstr "Následující"
-
 #: articles/templates/redaction.html:9
 #: articles/templates/redaction_article.html:8
 msgid "Articles"
 msgstr "Články"
 
 #: articles/templates/redaction.html:11
-#: articles/templates/redaction_short.html:8
+#: articles/templates/redaction_short.html:8 articles/templates/shorts.html:9
 msgid "Shorts"
 msgstr "Zprávičky"
 
@@ -279,15 +278,15 @@ msgstr "Vyhledat: Hledaný výraz je příliš dlouhý. Zadejte maximálně 100 
 msgid "Searching for '{}': {} articles found."
 msgstr "Vyhledat '{}': nalezeno {} článků."
 
-#: articles/views.py:384
+#: articles/views.py:410
 msgid "Error: It seems E-Mail system is not configured yet."
 msgstr "Nastala chyba: Zdá se, že e-mailový systém není nakonfigurovaný."
 
-#: articles/views.py:386
+#: articles/views.py:412
 msgid "Error: {} seems not to be valid e-mail address."
 msgstr "Nastala chyba: {} nevypadá jako platná e-mailová adresa."
 
-#: articles/views.py:395
+#: articles/views.py:421
 msgid "Your inquiry has been sent."
 msgstr "Zpráva byla odeslána."
 

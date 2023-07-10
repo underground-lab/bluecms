@@ -14,6 +14,7 @@
             {{ obj.body | markdown | safe }}
         {% endfor %}
         <a href="{% url 'shorts' %}">{% trans 'More news' %} >></a>
+        <p></p>
     {% else %}
         <h5>{% trans 'No shorts' %}</h5>
     {% endif %}
