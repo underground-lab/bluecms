@@ -12,8 +12,8 @@
             <h4>{{ obj.header }}</h4>
             <h5>{{ obj.created_date|date:"d.m.Y" }}</h5>
             {{ obj.body | markdown | safe }}
-            <p></p>
         {% endfor %}
+        <a href="{% url 'shorts' %}">{% trans 'More news' %} >></a>
     {% else %}
         <h5>{% trans 'No shorts' %}</h5>
     {% endif %}

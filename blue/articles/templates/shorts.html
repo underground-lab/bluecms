@@ -1,0 +1,23 @@
+{% extends "base_paginated.html" %}
+{% load i18n %}
+{% load static %}
+{% load markdown_extras %}
+
+<body>
+    {% block content %}
+
+    <h1>{% trans 'Shorts' %}</h1>
+
+    {% if object_list %}
+        {% for obj in object_list %}
+            <h4>{{ obj.header }}</h4>
+            <h5>{{ obj.created_date|date:"d.m.Y" }}</h5>
+            {{ obj.body | markdown | safe }}
+            <p></p>
+        {% endfor %}
+    {% else %}
+        <h5>{% trans 'No shorts' %}</h5>
+    {% endif %}
+
+    {% endblock %}
+</body>
