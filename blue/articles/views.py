@@ -47,7 +47,7 @@ class ArticleListView(ListView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(ListView, self).get_context_data(*args, **kwargs)
-        context['shorts'] = Short.objects.filter(published=True).order_by('-created_date')
+        context['shorts'] = Short.objects.filter(published=True).order_by('-created_date')[:5]
         context['useful_links'] = UsefulLink.objects.filter(published=True).order_by('order')
         context['menu'] = 1
         context['search'] = ''
@@ -70,6 +70,25 @@ class ArticleDetailView(DetailView):
         if not self.request.user.is_active and not context['object'].published:
             raise Http404
         return context
+
+
+# Shorts
+##########
+
+class ShortListView(ListView):
+    model = Short
+    paginate_by = 10
+    template_name = 'shorts.html'
+    ordering = ['-created_date']
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ListView, self).get_context_data(*args, **kwargs)
+        context['menu'] = 0
+        return context
+    
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(published=True)
 
 
 # Redaction

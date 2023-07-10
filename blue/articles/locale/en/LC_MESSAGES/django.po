@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-30 19:16+0200\n"
+"POT-Creation-Date: 2023-07-10 20:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: articles/models.py:8 articles/models.py:28 articles/models.py:39
+#: articles/models.py:8 articles/models.py:27 articles/models.py:41
 #: articles/templates/redaction_short.html:13
 #: articles/templates/redaction_useful_link.html:14
 msgid "Header"
 msgstr "Header"
 
-#: articles/models.py:11 articles/models.py:31 articles/models.py:42
+#: articles/models.py:11 articles/models.py:30 articles/models.py:44
 #: articles/templates/redaction_article.html:16
 #: articles/templates/redaction_short.html:16
 #: articles/templates/redaction_useful_link.html:16
@@ -35,28 +35,28 @@ msgstr "Published"
 msgid "Perex (markdown)"
 msgstr "Perex (markdown)"
 
-#: articles/models.py:13 articles/models.py:32
+#: articles/models.py:13 articles/models.py:31
 msgid "Body (markdown)"
 msgstr "Body (markdown)"
 
-#: articles/models.py:40 articles/templates/redaction_useful_link.html:15
+#: articles/models.py:42 articles/templates/redaction_useful_link.html:15
 msgid "Link"
 msgstr "Link"
 
-#: articles/models.py:41 articles/templates/redaction_useful_link.html:13
+#: articles/models.py:43 articles/templates/redaction_useful_link.html:13
 msgid "Order"
 msgstr "Order"
 
-#: articles/models.py:53 articles/templates/article_edit.html:20
+#: articles/models.py:58 articles/templates/article_edit.html:20
 #: articles/templates/redaction_asset.html:13
 msgid "Description"
 msgstr "Description"
 
-#: articles/models.py:54 articles/templates/redaction_asset.html:16
+#: articles/models.py:59 articles/templates/redaction_asset.html:16
 msgid "File"
 msgstr "File"
 
-#: articles/models.py:55 articles/templates/article_edit.html:6
+#: articles/models.py:60 articles/templates/article_edit.html:6
 #: articles/templates/redaction_article.html:13
 #: articles/templates/redaction_asset.html:14
 msgid "Article"
@@ -117,49 +117,64 @@ msgstr "Are you sure you want to delete asset"
 msgid "and related file"
 msgstr "and related file"
 
-#: articles/templates/base.html:35
+#: articles/templates/base.html:49
 msgid "Home"
 msgstr "Home"
 
-#: articles/templates/base.html:37 articles/templates/redaction.html:7
+#: articles/templates/base.html:51 articles/templates/redaction.html:7
 msgid "Redaction"
 msgstr "Redaction"
 
-#: articles/templates/base.html:39 articles/templates/contact.html:8
+#: articles/templates/base.html:53 articles/templates/contact.html:8
 msgid "Contact Us"
 msgstr "Contact Us"
 
-#: articles/templates/base.html:41
+#: articles/templates/base.html:55
 msgid "Logout"
 msgstr "Logout"
 
-#: articles/templates/base.html:43
+#: articles/templates/base.html:57
 msgid "Login"
 msgstr "Login"
+
+#: articles/templates/base_paginated.html:14
+#: articles/templates/base_with_sidebar.html:48
+msgid "Previous"
+msgstr "Previous"
+
+#: articles/templates/base_paginated.html:18
+#: articles/templates/base_with_sidebar.html:52
+msgid "Next"
+msgstr "Next"
 
 #: articles/templates/base_with_sidebar.html:9
 msgid "Latest News"
 msgstr "Latest News"
 
-#: articles/templates/base_with_sidebar.html:18
+#: articles/templates/base_with_sidebar.html:16
+msgid "More news"
+msgstr "More news"
+
+#: articles/templates/base_with_sidebar.html:19
+#: articles/templates/shorts.html:19
 msgid "No shorts"
 msgstr "No shorts"
 
-#: articles/templates/base_with_sidebar.html:20
+#: articles/templates/base_with_sidebar.html:21
 #: articles/templates/redaction.html:12
 #: articles/templates/redaction_useful_link.html:8
 msgid "Useful Links"
 msgstr "Useful Links"
 
-#: articles/templates/base_with_sidebar.html:27
+#: articles/templates/base_with_sidebar.html:28
 msgid "No links"
 msgstr "No links"
 
-#: articles/templates/base_with_sidebar.html:30
+#: articles/templates/base_with_sidebar.html:31
 msgid "Search"
 msgstr "Search"
 
-#: articles/templates/base_with_sidebar.html:34
+#: articles/templates/base_with_sidebar.html:35
 msgid "Enter keywords"
 msgstr "Enter keywords"
 
@@ -189,29 +204,13 @@ msgstr "We will respond you as soon as possible."
 msgid "No articles"
 msgstr "No articles"
 
-#: articles/templates/homepage.html:20
-#: articles/templates/redaction_article.html:35
-#: articles/templates/redaction_asset.html:33
-#: articles/templates/redaction_short.html:35
-#: articles/templates/redaction_useful_link.html:35
-msgid "Previous"
-msgstr "Previous"
-
-#: articles/templates/homepage.html:24
-#: articles/templates/redaction_article.html:39
-#: articles/templates/redaction_asset.html:37
-#: articles/templates/redaction_short.html:39
-#: articles/templates/redaction_useful_link.html:39
-msgid "Next"
-msgstr "Next"
-
 #: articles/templates/redaction.html:9
 #: articles/templates/redaction_article.html:8
 msgid "Articles"
 msgstr "Articles"
 
 #: articles/templates/redaction.html:11
-#: articles/templates/redaction_short.html:8
+#: articles/templates/redaction_short.html:8 articles/templates/shorts.html:9
 msgid "Shorts"
 msgstr "Shorts"
 
@@ -278,15 +277,15 @@ msgstr "Search: Keyword is too long. Type maximum of 100 characters."
 msgid "Searching for '{}': {} articles found."
 msgstr "Searching for '{}': {} articles found."
 
-#: articles/views.py:384
+#: articles/views.py:410
 msgid "Error: It seems E-Mail system is not configured yet."
 msgstr "Error: It seems E-Mail system is not configured yet."
 
-#: articles/views.py:386
+#: articles/views.py:412
 msgid "Error: {} seems not to be valid e-mail address."
 msgstr "Error: {} seems not to be valid e-mail address."
 
-#: articles/views.py:395
+#: articles/views.py:421
 msgid "Your inquiry has been sent."
 msgstr "Your inquiry has been sent."
 
