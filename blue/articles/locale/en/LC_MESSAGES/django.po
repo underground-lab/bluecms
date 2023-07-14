@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 20:53+0200\n"
+"POT-Creation-Date: 2023-07-15 00:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,9 +129,9 @@ msgstr "Redaction"
 msgid "Contact Us"
 msgstr "Contact Us"
 
-#: articles/templates/base.html:55
-msgid "Logout"
-msgstr "Logout"
+#: articles/templates/base.html:55 articles/templates/my_account.html:7
+msgid "My account"
+msgstr "My account"
 
 #: articles/templates/base.html:57
 msgid "Login"
@@ -203,6 +203,14 @@ msgstr "We will respond you as soon as possible."
 #: articles/templates/homepage.html:16
 msgid "No articles"
 msgstr "No articles"
+
+#: articles/templates/my_account.html:9
+msgid "Password change"
+msgstr "Password change"
+
+#: articles/templates/my_account.html:10
+msgid "Logout"
+msgstr "Logout"
 
 #: articles/templates/redaction.html:9
 #: articles/templates/redaction_article.html:8
@@ -277,15 +285,15 @@ msgstr "Search: Keyword is too long. Type maximum of 100 characters."
 msgid "Searching for '{}': {} articles found."
 msgstr "Searching for '{}': {} articles found."
 
-#: articles/views.py:410
+#: articles/views.py:412
 msgid "Error: It seems E-Mail system is not configured yet."
 msgstr "Error: It seems E-Mail system is not configured yet."
 
-#: articles/views.py:412
+#: articles/views.py:414
 msgid "Error: {} seems not to be valid e-mail address."
 msgstr "Error: {} seems not to be valid e-mail address."
 
-#: articles/views.py:421
+#: articles/views.py:423
 msgid "Your inquiry has been sent."
 msgstr "Your inquiry has been sent."
 

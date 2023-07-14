@@ -52,7 +52,7 @@
           {% endif %}
           <li {% if menu == 3 %} class="selected" {% endif %}><a href="{% url 'contact' %}">{% trans 'Contact Us' %}</a></li>
           {% if request.user.is_authenticated %}
-          <li {% if menu == 4 %} class="selected" {% endif %}><a href="/accounts/logout">{% trans 'Logout' %} ({{ request.user.username }})</a></li>
+          <li {% if menu == 4 %} class="selected" {% endif %}><a href="{% url 'myaccount' %}">{% trans 'My account' %}</a></li>
           {% else %}
           <li {% if menu == 4 %} class="selected" {% endif %}><a href="/accounts/login">{% trans 'Login' %}</a></li>
           {% endif %}

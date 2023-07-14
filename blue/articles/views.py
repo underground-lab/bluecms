@@ -84,6 +84,8 @@ class ShortListView(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super(ListView, self).get_context_data(*args, **kwargs)
         context['menu'] = 0
+        if settings.BLUECMS_GOOGLE_ANALYTICS is not None:
+            context['google_analitics'] = settings.BLUECMS_GOOGLE_ANALYTICS
         return context
     
     def get_queryset(self):
@@ -423,3 +425,16 @@ def contact(request):
         return render(request, 'contact.html', context=context)
     else:
         return render(request, 'contact.html', context=context)
+
+
+# My Account
+############
+
+def myaccount(request):
+    if not request.user.is_authenticated:
+        raise Http404
+    
+    context = {
+        'menu': 4,
+    }
+    return render(request, 'my_account.html', context=context)
