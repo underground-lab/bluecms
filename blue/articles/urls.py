@@ -2,6 +2,7 @@ from . import views
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -25,6 +26,8 @@ urlpatterns = [
     path('asset_create', views.AssetCreateView.as_view(), name='asset_create'),
     path('asset_delete/<int:pk>', views.AssetDeleteView.as_view(), name='asset_delete'),
     path('contact', views.contact, name='contact'),
+    path('myaccount', views.myaccount, name='myaccount'),
+    path('change-password',auth_views.PasswordChangeView.as_view(template_name='registration/password-change.html', success_url = '/myaccount'), name='change_password'),
 ]
 
 if settings.DEBUG:
